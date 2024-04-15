@@ -12,7 +12,8 @@
     "immer": "^10.0.4",
     "pinia": "^2.1.7",
     "vue": "^3.4.21",
-    "vuex": "^4.1.0"
+    "vuex": "^4.1.0",
+    "xstate": "^5.9.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.8",

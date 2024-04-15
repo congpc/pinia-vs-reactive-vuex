@@ -3,6 +3,7 @@ import { reactive, ref, shallowReactive, shallowRef } from "vue";
 import { useTestStore as usePiniaStore } from "./usePiniaStore";
 import { vuexStore as testStoreVuex } from "./useVuexStore";
 import { useImmerStore } from "./useImmerStore";
+// import { state as xStateRef, countActor } from "./useStateMachine";
 
 const testStorePinia = usePiniaStore();
 
@@ -26,6 +27,7 @@ const time = reactive({
   shallowRef: 0,
   shallowReactive: 0,
   shallowTriggerReactive: 0,
+  // shallowXState: 0,
   immerRef: 0,
   immerReactive: 0,
   piniaRef: 0,
@@ -56,6 +58,13 @@ for (let i = 0; i < counter; i++) {
 }
 time.immerRef = `Shallow Immer Ref time: ${Date.now() - startTime}ms`;
 console.log(immerRefVar.value, time.immerRef);
+// XState
+// startTime = Date.now();
+// for (let i = 0; i < counter; i++) {
+//   countActor.send({ type: 'SET', value: i });
+// }
+// time.shallowXState = `Shallow XState Ref time: ${Date.now() - startTime}ms`;
+// console.log(xStateRef.value, time.shallowXState);
 // Pinia
 startTime = Date.now();
 for (let i = 0; i < counter; i++) {
